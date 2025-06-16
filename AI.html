@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>OpenAIモデル比較アプリ</title>
+  <link rel="stylesheet" href="Style_AI.css">
+</head>
+<body>
+  <h1>OpenAIモデル比較アプリ</h1>
+  <input type="text" id="prompt" placeholder="">
+  <button onclick="sendToModels()">送信</button>
+
+  <div class="results-container">
+    <div class="model-box">
+      <h3>gpt-3.5-turbo</h3>
+      <div class="info" id="info35"></div>
+      <pre id="out35"></pre>
+    </div>
+    <div class="model-box">
+      <h3>gpt-4</h3>
+      <div class="info" id="info4"></div>
+      <pre id="out4"></pre>
+    </div>
+    <div class="model-box">
+      <h3>gpt-4-turbo</h3>
+      <div class="info" id="info4t"></div>
+      <pre id="out4t"></pre>
+    </div>
+    <div class="model-box">
+      <h3>gpt-4o</h3>
+      <div class="info" id="info4o"></div>
+      <pre id="out4o"></pre>
+    </div>
+  </div>
+
+  <script src="Script_AI.js"></script>
+</body>
+</html>

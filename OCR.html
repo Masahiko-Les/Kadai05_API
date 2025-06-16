@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>OCR動作比較アプリ</title>
+  <link rel="stylesheet" href="Style_OCR.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <h1>OCR動作比較アプリ（Tesseract / Google / OCR.space）</h1>
+  <input type="file" id="imageInput" accept="image/*"><br><br>
+  <img id="preview" class="preview" src=""><br>
+  <button onclick="runAllOCR()">すべてのOCRを実行</button>
+
+  <div class="result-container">
+    <div class="ocr-box">
+      <h3>Tesseract.js</h3>
+      <div class="meta" id="meta-tess"></div>
+      <pre id="out-tess"></pre>
+    </div>
+    <div class="ocr-box">
+      <h3>Google Cloud Vision</h3>
+      <div class="meta" id="meta-gcv"></div>
+      <pre id="out-gcv"></pre>
+    </div>
+    <div class="ocr-box">
+      <h3>OCR.space</h3>
+      <div class="meta" id="meta-ocrspace"></div>
+      <pre id="out-ocrspace"></pre>
+    </div>
+  </div>
+
+  <script src="Script_OCR.js"></script>
+</body>
+</html>
