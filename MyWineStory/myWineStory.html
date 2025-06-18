@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>ワイン銘柄解析アプリ</title>
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+
+  <h1>My Wine Story</h1>
+  <h2>ワインのラベルの写真から、銘柄や産地などを記録し、豆知識も提供してくれます。</h2>
+  <input type="file" id="imageInput" accept="image/*">
+  <button onclick="analyzeWineLabel()">解析する</button>
+  <p id="status"></p>
+  <pre id="result"></pre>
+
+
+
+<h2>解析履歴</h2>
+<div id="history" class="card-container"></div>
+
+
+
+  <!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore-compat.js"></script>
+
+<!-- Firebase config を外部から読み込む -->
+<script src="firebaseconfig.js"></script>
+
+<!-- メインロジック -->
+<script src="main.js"></script>
+
+</body>
+</html>
